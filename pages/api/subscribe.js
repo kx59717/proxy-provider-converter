@@ -69,7 +69,7 @@ module.exports = async (req, res) => {
      const manual = ['手动选择', '自动选择']
      let manulFlag = manual.some(j => i.name.includes(j))
      if (manulFlag) {
-       i.proxies = configFinalFile.proxies
+       i.proxies = configFinalFile.proxies.map((proxy) => proxy.name)
      }
   })
   // 国家
