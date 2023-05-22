@@ -82,11 +82,12 @@ module.exports = async (req, res) => {
       tolerance: 50,
       proxies: configFinalFile.proxies.filter((proxy) => {
         if (proxy.name.includes(country)) return proxy.name
-      })
+      }).map((proxy) => proxy.name)
     })
   })
 
-  const response = YAML.stringify(configFinalFile);
+  const newResponse = JSON.parse(JSON.stringify(configFinalFile));
+  const response = YAML.stringify(newResponse);
   
   res.setHeader('Content-Type', 'text/plain; charset=utf-8');
   res.status(200).send(response);
