@@ -1,0 +1,688 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+proxies:
+proxy-groups:
+  - name: 🎥 Netflix
+    type: select
+    proxies:
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: 🎥 DisneyPlus
+    type: select
+    proxies:
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: 🎥 Youtube
+    type: select
+    proxies:
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: 💻 Telegram
+    type: select
+    proxies:
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: 💻 PayPal
+    type: select
+    proxies:
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: 💻 Microsoft
+    type: select
+    proxies:
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: 💻 Apple
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: 💻 OpenAI
+    type: select
+    proxies:
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: 💻 Shopify
+    type: select
+    proxies:
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: 💻 Google
+    type: select
+    proxies:
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: 🚀 国外流量
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+  - name: 🎯 国内流量
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: 🚀 手动选择1
+    type: select
+    proxies:
+      - 🇭🇰|香港-中转 01
+      - 🇭🇰|香港-中转 02
+      - 🇭🇰|香港-中转 03
+      - 🇭🇰|香港-中转 04
+      - 🇭🇰|香港-中转 05
+      - 🇭🇰|香港-中转 06
+      - 🇭🇰|香港-IEPL 01
+      - 🇭🇰|香港-IEPL 02
+      - 🇭🇰|香港-IEPL 03
+      - 🇭🇰|香港-IEPL 04
+      - 🇸🇬|新加坡-IEPL 01
+      - 🇸🇬|新加坡-IEPL 02
+      - 🇸🇬|新加坡-IEPL 03
+      - 🇸🇬|新加坡-中转 01
+      - 🇸🇬|新加坡-中转 02
+      - 🇸🇬|新加坡-中转 03
+      - 🇸🇬|新加坡-中转 04
+      - 🇹🇼|台湾-IEPL 01
+      - 🇹🇼|台湾-IEPL 02
+      - 🇹🇼|台湾-IEPL 03
+      - 🇹🇼|台湾-中转 01
+      - 🇹🇼|台湾-中转 02
+      - 🇹🇼|台湾-隧道 01
+      - 🇹🇼|台湾-隧道 02
+      - 🇯🇵|日本-IEPL 01
+      - 🇯🇵|日本-IEPL 02
+      - 🇯🇵|日本-IEPL 03
+      - 🇯🇵|日本-中转 01
+      - 🇯🇵|日本-中转 02
+      - 🇯🇵|日本-中转 03
+      - 🇯🇵|日本-IEPL D+直播优化 01
+      - 🇯🇵|日本-IEPL D+直播优化 02
+      - 🇯🇵|日本-IEPL D+直播优化 03
+      - 🇯🇵|日本-中转 D+直播优化 01
+      - 🇯🇵|日本-中转 D+直播优化 02
+      - 🇯🇵|日本-中转 D+直播优化 03
+      - 🇯🇵|日本-中转 D+直播优化 04
+      - 🇯🇵|日本-进阶IEPL Disney+优化 01
+      - 🇯🇵|日本-进阶IEPL Disney+优化 02
+      - 🇯🇵|日本-进阶 Disney+优化 01
+      - 🇯🇵|日本-进阶 Disney+优化 02
+      - 🇯🇵|日本-进阶 Disney+优化 03
+      - 🇯🇵|日本-进阶 Disney+优化 04
+      - 🇯🇵|日本原生-IEPL 01|2倍消耗
+      - 🇯🇵|日本原生-IEPL 02|2倍消耗
+      - 🇯🇵|日本原生-中转 01|2倍消耗
+      - 🇯🇵|日本原生-中转 02|2倍消耗
+      - 🇯🇵|日本原生-中转 03|2倍消耗
+      - 🇯🇵|日本原生-中转 04|2倍消耗
+      - 🇰🇷|韩国-IEPL 01
+      - 🇰🇷|韩国-IEPL 02
+      - 🇰🇷|韩国-中转 01
+      - 🇰🇷|韩国-中转 02
+      - 🇰🇷|韩国-中转 03
+      - 🇬🇧|英国-IEPL 01
+      - 🇬🇧|英国-IEPL 02
+      - 🇫🇷|法国-IEPL
+      - 🇩🇪|德国-IEPL
+      - 🇺🇸|美国-隧道 01
+      - 🇺🇸|美国-隧道 02
+      - 🇺🇸|美国-IEPL 01
+      - 🇺🇸|美国-IEPL 02
+      - 🇺🇸|美国-IEPL 03
+      - 🇺🇸|美国-中转 01
+      - 🇺🇸|美国-中转 02
+      - 🇺🇸|美国-中转 03
+      - 🇺🇸|美国-中转 04
+      - 🇹🇷|土耳其-中转 01
+      - 🇹🇷|土耳其-中转 02
+      - 🇹🇷|土耳其-中转 03
+      - 🇹🇷|土耳其-中转 04
+      - 🇹🇷|土耳其-IEPL 01
+      - 🇹🇷|土耳其-IEPL 02
+      - 🇹🇷|土耳其-IEPL 03
+      - 🇹🇷|土耳其-IEPL 04
+      - 🇦🇷|阿根廷-IEPL 01
+      - 🇦🇷|阿根廷-IEPL 02
+      - 🇦🇷|阿根廷-IEPL 03
+      - 🇵🇭|菲律宾-IEPL
+      - 🇷🇺|俄罗斯-IEPL
+      - 🇹🇭|泰国-IEPL 01
+      - 🇹🇭|泰国-IEPL 02
+      - 🇲🇾|马来西亚-IEPL
+      - 🇧🇷|巴西-IEPL
+      - 🇮🇳|印度-IEPL 01
+      - 🇮🇳|印度-IEPL 02
+  - name: 🚀 手动选择2
+    type: select
+    proxies:
+      - 🇭🇰|香港-中转 01
+      - 🇭🇰|香港-中转 02
+      - 🇭🇰|香港-中转 03
+      - 🇭🇰|香港-中转 04
+      - 🇭🇰|香港-中转 05
+      - 🇭🇰|香港-中转 06
+      - 🇭🇰|香港-IEPL 01
+      - 🇭🇰|香港-IEPL 02
+      - 🇭🇰|香港-IEPL 03
+      - 🇭🇰|香港-IEPL 04
+      - 🇸🇬|新加坡-IEPL 01
+      - 🇸🇬|新加坡-IEPL 02
+      - 🇸🇬|新加坡-IEPL 03
+      - 🇸🇬|新加坡-中转 01
+      - 🇸🇬|新加坡-中转 02
+      - 🇸🇬|新加坡-中转 03
+      - 🇸🇬|新加坡-中转 04
+      - 🇹🇼|台湾-IEPL 01
+      - 🇹🇼|台湾-IEPL 02
+      - 🇹🇼|台湾-IEPL 03
+      - 🇹🇼|台湾-中转 01
+      - 🇹🇼|台湾-中转 02
+      - 🇹🇼|台湾-隧道 01
+      - 🇹🇼|台湾-隧道 02
+      - 🇯🇵|日本-IEPL D+直播优化 01
+      - 🇯🇵|日本-IEPL D+直播优化 02
+      - 🇯🇵|日本-IEPL D+直播优化 03
+      - 🇯🇵|日本-中转 D+直播优化 01
+      - 🇯🇵|日本-中转 D+直播优化 02
+      - 🇯🇵|日本-中转 D+直播优化 03
+      - 🇯🇵|日本-中转 D+直播优化 04
+      - 🇯🇵|日本-进阶IEPL Disney+优化 01
+      - 🇯🇵|日本-进阶IEPL Disney+优化 02
+      - 🇯🇵|日本-进阶 Disney+优化 01
+      - 🇯🇵|日本-进阶 Disney+优化 02
+      - 🇯🇵|日本-进阶 Disney+优化 03
+      - 🇯🇵|日本-进阶 Disney+优化 04
+      - 🇯🇵|日本原生-IEPL 01|2倍消耗
+      - 🇯🇵|日本原生-IEPL 02|2倍消耗
+      - 🇯🇵|日本原生-中转 01|2倍消耗
+      - 🇯🇵|日本原生-中转 02|2倍消耗
+      - 🇯🇵|日本原生-中转 03|2倍消耗
+      - 🇯🇵|日本原生-中转 04|2倍消耗
+      - 🇰🇷|韩国-IEPL 01
+      - 🇰🇷|韩国-IEPL 02
+      - 🇰🇷|韩国-中转 01
+      - 🇰🇷|韩国-中转 02
+      - 🇰🇷|韩国-中转 03
+      - 🇬🇧|英国-IEPL 01
+      - 🇬🇧|英国-IEPL 02
+      - 🇫🇷|法国-IEPL
+      - 🇩🇪|德国-IEPL
+      - 🇺🇸|美国-隧道 01
+      - 🇺🇸|美国-隧道 02
+      - 🇺🇸|美国-IEPL 01
+      - 🇺🇸|美国-IEPL 02
+      - 🇺🇸|美国-IEPL 03
+      - 🇺🇸|美国-中转 01
+      - 🇺🇸|美国-中转 02
+      - 🇺🇸|美国-中转 03
+      - 🇺🇸|美国-中转 04
+      - 🇹🇷|土耳其-中转 01
+      - 🇹🇷|土耳其-中转 02
+      - 🇹🇷|土耳其-中转 03
+      - 🇹🇷|土耳其-中转 04
+      - 🇹🇷|土耳其-IEPL 01
+      - 🇹🇷|土耳其-IEPL 02
+      - 🇹🇷|土耳其-IEPL 03
+      - 🇹🇷|土耳其-IEPL 04
+      - 🇦🇷|阿根廷-IEPL 01
+      - 🇦🇷|阿根廷-IEPL 02
+      - 🇦🇷|阿根廷-IEPL 03
+      - 🇵🇭|菲律宾-IEPL
+      - 🇷🇺|俄罗斯-IEPL
+      - 🇹🇭|泰国-IEPL 01
+      - 🇹🇭|泰国-IEPL 02
+      - 🇲🇾|马来西亚-IEPL
+      - 🇧🇷|巴西-IEPL
+      - 🇮🇳|印度-IEPL 01
+      - 🇮🇳|印度-IEPL 02
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - 🚀 手动选择1
+      - 🚀 手动选择2
+  - name: ♻️ 自动选择
+    type: url-test
+    url: https://i.ytimg.com/generate_204
+    interval: 180
+    tolerance: 50
+    proxies:
+      - 🇭🇰|香港-中转 01
+      - 🇭🇰|香港-中转 02
+      - 🇭🇰|香港-中转 03
+      - 🇭🇰|香港-中转 04
+      - 🇭🇰|香港-中转 05
+      - 🇭🇰|香港-中转 06
+      - 🇭🇰|香港-IEPL 01
+      - 🇭🇰|香港-IEPL 02
+      - 🇭🇰|香港-IEPL 03
+      - 🇭🇰|香港-IEPL 04
+      - 🇸🇬|新加坡-IEPL 01
+      - 🇸🇬|新加坡-IEPL 02
+      - 🇸🇬|新加坡-IEPL 03
+      - 🇸🇬|新加坡-中转 01
+      - 🇸🇬|新加坡-中转 02
+      - 🇸🇬|新加坡-中转 03
+      - 🇸🇬|新加坡-中转 04
+      - 🇹🇼|台湾-IEPL 01
+      - 🇹🇼|台湾-IEPL 02
+      - 🇹🇼|台湾-IEPL 03
+      - 🇹🇼|台湾-中转 01
+      - 🇹🇼|台湾-中转 02
+      - 🇹🇼|台湾-隧道 01
+      - 🇹🇼|台湾-隧道 02
+      - 🇯🇵|日本-IEPL D+直播优化 01
+      - 🇯🇵|日本-IEPL D+直播优化 02
+      - 🇯🇵|日本-IEPL D+直播优化 03
+      - 🇯🇵|日本-中转 D+直播优化 01
+      - 🇯🇵|日本-中转 D+直播优化 02
+      - 🇯🇵|日本-中转 D+直播优化 03
+      - 🇯🇵|日本-中转 D+直播优化 04
+      - 🇯🇵|日本-进阶IEPL Disney+优化 01
+      - 🇯🇵|日本-进阶IEPL Disney+优化 02
+      - 🇯🇵|日本-进阶 Disney+优化 01
+      - 🇯🇵|日本-进阶 Disney+优化 02
+      - 🇯🇵|日本-进阶 Disney+优化 03
+      - 🇯🇵|日本-进阶 Disney+优化 04
+      - 🇯🇵|日本原生-IEPL 01|2倍消耗
+      - 🇯🇵|日本原生-IEPL 02|2倍消耗
+      - 🇯🇵|日本原生-中转 01|2倍消耗
+      - 🇯🇵|日本原生-中转 02|2倍消耗
+      - 🇯🇵|日本原生-中转 03|2倍消耗
+      - 🇯🇵|日本原生-中转 04|2倍消耗
+      - 🇰🇷|韩国-IEPL 01
+      - 🇰🇷|韩国-IEPL 02
+      - 🇰🇷|韩国-中转 01
+      - 🇰🇷|韩国-中转 02
+      - 🇰🇷|韩国-中转 03
+      - 🇬🇧|英国-IEPL 01
+      - 🇬🇧|英国-IEPL 02
+      - 🇫🇷|法国-IEPL
+      - 🇩🇪|德国-IEPL
+      - 🇺🇸|美国-隧道 01
+      - 🇺🇸|美国-隧道 02
+      - 🇺🇸|美国-IEPL 01
+      - 🇺🇸|美国-IEPL 02
+      - 🇺🇸|美国-IEPL 03
+      - 🇺🇸|美国-中转 01
+      - 🇺🇸|美国-中转 02
+      - 🇺🇸|美国-中转 03
+      - 🇺🇸|美国-中转 04
+      - 🇹🇷|土耳其-中转 01
+      - 🇹🇷|土耳其-中转 02
+      - 🇹🇷|土耳其-中转 03
+      - 🇹🇷|土耳其-中转 04
+      - 🇹🇷|土耳其-IEPL 01
+      - 🇹🇷|土耳其-IEPL 02
+      - 🇹🇷|土耳其-IEPL 03
+      - 🇹🇷|土耳其-IEPL 04
+      - 🇦🇷|阿根廷-IEPL 01
+      - 🇦🇷|阿根廷-IEPL 02
+      - 🇦🇷|阿根廷-IEPL 03
+      - 🇵🇭|菲律宾-IEPL
+      - 🇷🇺|俄罗斯-IEPL
+      - 🇹🇭|泰国-IEPL 01
+      - 🇹🇭|泰国-IEPL 02
+      - 🇲🇾|马来西亚-IEPL
+      - 🇧🇷|巴西-IEPL
+      - 🇮🇳|印度-IEPL 01
+      - 🇮🇳|印度-IEPL 02
+      - 🇧🇷|巴西-IEPL
+rule-providers:
+  Reject:
+    type: http
+    behavior: classical
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Reject.yaml'
+    path: ./Rules/Reject
+    interval: 86400
+
+  Special:
+    type: http
+    behavior: classical
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Special.yaml'
+    path: ./Rules/Special
+    interval: 86400
+
+  Netflix:
+    type: http
+    behavior: classical
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Netflix.yaml'
+    path: ./Rules/Media/Netflix
+    interval: 86400
+
+  YouTube:
+    type: http
+    behavior: classical
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/YouTube.yaml'
+    path: ./Rules/Media/YouTube
+    interval: 86400
+
+  Disney Plus:
+    type: http
+    behavior: classical
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Disney%20Plus.yaml'
+    path: ./Rules/Media/Disney_Plus
+    interval: 86400
+
+  Telegram:
+    type: http
+    behavior: classical
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Telegram.yaml'
+    path: ./Rules/Telegram
+    interval: 86400
+
+  PayPal:
+      type: http
+      behavior: classical
+      url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/PayPal.yaml'
+      path: ./Rules/PayPal
+      interval: 86400
+
+  Microsoft:
+    type: http
+    behavior: classical
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Microsoft.yaml'
+    path: ./Rules/Microsoft
+    interval: 86400
+
+  Domestic:
+      type: http
+      behavior: classical
+      url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Domestic.yaml'
+      path: ./Rules/Domestic
+      interval: 86400
+
+  Apple:
+    type: http
+    behavior: classical
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Apple.yaml'
+    path: ./Rules/Apple
+    interval: 86400
+
+  Domestic IPs:
+    type: http
+    behavior: ipcidr
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Domestic%20IPs.yaml'
+    path: ./Rules/Domestic_IPs
+    interval: 86400
+
+  LAN:
+    type: http
+    behavior: classical
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/LAN.yaml'
+    path: ./Rules/LAN
+    interval: 86400
+
+  PROXY:
+    type: http
+    behavior: classical
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Proxy.yaml'
+    path: ./Rules/Proxy
+    interval: 86400
+  Google:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml'
+    path: ./Rules/Google
+rules:
+ - RULE-SET,Reject,REJECT
+ - RULE-SET,Special,DIRECT
+ - DOMAIN,clash.razord.top,DIRECT
+ - DOMAIN,yacd.haishan.me,DIRECT
+ - DOMAIN,router.asus.com,DIRECT
+ - DOMAIN-SUFFIX,openai.com,💻 OpenAI
+ - DOMAIN-SUFFIX,shopify.com,💻 Shopify
+ - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,💻 OpenAI
+ - DOMAIN-SUFFIX,identrust.com,💻 OpenAI
+ - DOMAIN-SUFFIX,auth0.com,💻 OpenAI
+ - RULE-SET,Google,💻 Google
+ - RULE-SET,Netflix,🎥 Netflix
+ - RULE-SET,YouTube,🎥 Youtube
+ - RULE-SET,Disney Plus,🎥 DisneyPlus
+ - RULE-SET,Telegram,💻 Telegram
+ - RULE-SET,PayPal,💻 PayPal
+ - RULE-SET,Microsoft,💻 Microsoft
+ - RULE-SET,Apple,💻 Apple
+ - RULE-SET,Domestic,DIRECT
+ - RULE-SET,Domestic IPs,DIRECT
+ - RULE-SET,LAN,DIRECT
+ - RULE-SET,PROXY,🚀 国外流量
+ - GEOIP,LAN,DIRECT
+ - GEOIP,CN,DIRECT
+ - MATCH,🐟 漏网之鱼

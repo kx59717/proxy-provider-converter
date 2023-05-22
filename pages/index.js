@@ -12,10 +12,11 @@ if (typeof window !== "undefined") {
 export default function Home() {
   const [url, setUrl] = useState("");
   const [target, setTarget] = useState("clash");
+  const [filter, setFilter] = useState("");
 
   const convertedUrl = `${host}/api/convert?url=${encodeURIComponent(
     url
-  )}&target=${target}`;
+  )}&target=${target}&filter=${filter}`;
 
   let urlHost = "";
   try {
@@ -119,6 +120,12 @@ ${urlHost || "egroup"} = select, policy-path=${convertedUrl}
               <SelectorIcon className="absolute h-6 top-3.5 right-3 text-gray-400" />
             </div>
           </div>
+          <input
+              className="w-full h-full p-4 text-lg bg-white rounded-lg shadow-sm focus:outline-none mt-2"
+              placeholder="过滤的节点名称, 以逗号隔开, 可选"
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+            />
         </div>
         {url && (
           <div className="break-all p-3 mt-4 rounded-lg text-gray-100 bg-gray-900 shadow-sm w-full">

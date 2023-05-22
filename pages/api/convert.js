@@ -1,10 +1,12 @@
 const YAML = require("yaml");
 const axios = require("axios");
+const fs = require("fs");
+const path = require("path");
 
 module.exports = async (req, res) => {
   const url = req.query.url;
   const target = req.query.target;
-  console.log(`query: ${JSON.stringify(req.query)}`);
+  const filter = req.query.filter;
   if (url === undefined) {
     res.status(400).send("Missing parameter: url");
     return;
@@ -22,6 +24,7 @@ module.exports = async (req, res) => {
     });
     configFile = result.data;
   } catch (error) {
+    console.log(error, 'error')
     res.status(400).send(`Unable to get url, error: ${error}`);
     return;
   }
@@ -32,6 +35,7 @@ module.exports = async (req, res) => {
     config = YAML.parse(configFile);
     console.log(`👌 Parsed YAML`);
   } catch (error) {
+    console.log(error, 'error')
     res.status(500).send(`Unable parse config, error: ${error}`);
     return;
   }
@@ -115,7 +119,16 @@ module.exports = async (req, res) => {
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
     res.status(200).send(proxies.join("\n"));
   } else {
-    const response = YAML.stringify({ proxies: config.proxies });
+    const filterArray = filter.split(',').map((f) => f.trim())
+    const proxies = config.proxies.filter((proxy) => {
+      if (filterArray.length === 0) {
+        return true
+      }
+      return !filterArray.some((f) => proxy.name.includes(f))
+    });
+    const response = YAML.stringify({ proxies });
+    // 将response写入文件
+    fs.writeFileSync(path.resolve(process.cwd(), 'assets/proxies.yaml'), response);
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
     res.status(200).send(response);
   }
