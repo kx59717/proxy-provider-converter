@@ -666,11 +666,10 @@ rules:
  - DOMAIN,clash.razord.top,DIRECT
  - DOMAIN,yacd.haishan.me,DIRECT
  - DOMAIN,router.asus.com,DIRECT
- - DOMAIN-SUFFIX,openai.com,💻 OpenAI
- - DOMAIN-SUFFIX,shopify.com,💻 Shopify
- - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,💻 OpenAI
+ - DOMAIN-KEYWORD,openai,💻 OpenAI
  - DOMAIN-SUFFIX,identrust.com,💻 OpenAI
  - DOMAIN-SUFFIX,auth0.com,💻 OpenAI
+ - DOMAIN-KEYWORD,shopify,💻 Shopify
  - RULE-SET,Google,💻 Google
  - RULE-SET,Netflix,🎥 Netflix
  - RULE-SET,YouTube,🎥 Youtube
