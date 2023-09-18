@@ -620,6 +620,13 @@ rule-providers:
     path: ./Rules/Microsoft
     interval: 86400
 
+  OpenAI:
+    type: http
+    behavior: classical
+    url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/OpenAI.yaml'
+    path: ./Rules/OpenAI
+    interval: 86400
+
   Domestic:
       type: http
       behavior: classical
@@ -666,13 +673,11 @@ rules:
  - DOMAIN,clash.razord.top,DIRECT
  - DOMAIN,yacd.haishan.me,DIRECT
  - DOMAIN,router.asus.com,DIRECT
- - DOMAIN-KEYWORD,openai,💻 OpenAI
- - DOMAIN-SUFFIX,identrust.com,💻 OpenAI
- - DOMAIN-SUFFIX,auth0.com,💻 OpenAI
  - DOMAIN-KEYWORD,shopify,💻 Shopify
  - RULE-SET,Google,💻 Google
  - RULE-SET,Netflix,🎥 Netflix
  - RULE-SET,YouTube,🎥 Youtube
+ - RULE-SET,OpenAI,💻 OpenAI
  - RULE-SET,Disney Plus,🎥 DisneyPlus
  - RULE-SET,Telegram,💻 Telegram
  - RULE-SET,PayPal,💻 PayPal
