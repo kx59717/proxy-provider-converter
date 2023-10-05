@@ -128,7 +128,7 @@ module.exports = async (req, res) => {
     });
     const response = YAML.stringify({ proxies });
     // 将response写入文件
-    fs.writeFileSync(path.resolve(process.cwd(), 'assets/proxies.yaml'), response);
+    // fs.writeFileSync(path.resolve(process.cwd(), 'assets/proxies.yaml'), response);
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
     res.status(200).send(response);
   }
