@@ -661,12 +661,20 @@ rule-providers:
     url: 'https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Proxy.yaml'
     path: ./Rules/Proxy
     interval: 86400
+
   Google:
     type: http
     behavior: classical
     interval: 86400
     url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml'
     path: ./Rules/Google
+
+  Synology:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Synology/Synology.yaml'
+    path: ./Rules/Synology
 rules:
  - RULE-SET,Reject,REJECT
  - RULE-SET,Special,DIRECT
@@ -674,7 +682,6 @@ rules:
  - DOMAIN,yacd.haishan.me,DIRECT
  - DOMAIN,router.asus.com,DIRECT
  - DOMAIN-KEYWORD,shopify,💻 Shopify
- - DOMAIN-KEYWORD,synology,DIRECT
  - RULE-SET,Google,💻 Google
  - RULE-SET,Netflix,🎥 Netflix
  - RULE-SET,YouTube,🎥 Youtube
@@ -684,6 +691,7 @@ rules:
  - RULE-SET,PayPal,💻 PayPal
  - RULE-SET,Microsoft,💻 Microsoft
  - RULE-SET,Apple,💻 Apple
+ - RULE-SET,Synology,DIRECT
  - RULE-SET,Domestic,DIRECT
  - RULE-SET,Domestic IPs,DIRECT
  - RULE-SET,LAN,DIRECT
