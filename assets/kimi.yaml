@@ -674,6 +674,7 @@ rules:
  - DOMAIN,yacd.haishan.me,DIRECT
  - DOMAIN,router.asus.com,DIRECT
  - DOMAIN-KEYWORD,shopify,💻 Shopify
+ - DOMAIN-KEYWORD,synology,DIRECT
  - RULE-SET,Google,💻 Google
  - RULE-SET,Netflix,🎥 Netflix
  - RULE-SET,YouTube,🎥 Youtube
