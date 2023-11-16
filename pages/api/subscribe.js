@@ -60,19 +60,23 @@ module.exports = async (req, res) => {
   // proxy group 循环替换country
   configFinalFile['proxy-groups'].forEach(i => {
     // 按组选择的部分
-    const external = ['手动选择', '国内流量']
-     let flag = external.some(j => i.name.includes(j))
-     if (!flag && i.type === 'select') {
-       i.proxies = countries.concat(['🚀 国外流量', '🎯 国内流量', '♻️ 自动选择', '🚀 手动选择1', '🚀 手动选择2'])
-     }
-     // 手动选择部分
-     const manual = ['手动选择', '自动选择']
-     let manulFlag = manual.some(j => i.name.includes(j))
-     if (manulFlag) {
-       i.proxies = configFinalFile.proxies.filter((proxy) => {
+    const external = ['手动选择', '国内流量', '国外流量']
+    let flag = external.some(j => i.name.includes(j))
+    if (!flag && i.type === 'select') {
+      i.proxies = countries.concat(['🚀 国外流量', '🎯 国内流量', '♻️ 自动选择', '🚀 手动选择1', '🚀 手动选择2'])
+    }
+    // 国外流量
+    if (i.name === '国外流量') {
+      i.proxies = countries.concat(['♻️ 自动选择', '🚀 手动选择1', '🚀 手动选择2'])
+    }
+    // 手动选择部分
+    const manual = ['手动选择', '自动选择']
+    let manulFlag = manual.some(j => i.name.includes(j))
+    if (manulFlag) {
+      i.proxies = configFinalFile.proxies.filter((proxy) => {
         if (/\|.*-.*/.test(proxy.name)) return proxy.name
       }).map((proxy) => proxy.name)
-     }
+    }
   })
   // 国家
   countries.forEach((country) => {
