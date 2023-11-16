@@ -740,7 +740,7 @@ rules:
  - RULE-SET,PayPal,💻 PayPal
  - RULE-SET,Microsoft,💻 Microsoft
  - RULE-SET,Apple,💻 Apple
- - RULE-SET,Vercel,Vercel
+ - RULE-SET,Vercel,💻 Vercel
  - RULE-SET,Synology,DIRECT
  - RULE-SET,Domestic,DIRECT
  - RULE-SET,Domestic IPs,DIRECT
