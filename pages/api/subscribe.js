@@ -60,7 +60,7 @@ module.exports = async (req, res) => {
   // proxy group 循环替换country
   configFinalFile['proxy-groups'].forEach(i => {
     // 按组选择的部分
-    const external = ['手动选择', '国内流量', '漏网之鱼', '国外流量']
+    const external = ['手动选择', '国内流量', '国外流量']
      let flag = external.some(j => i.name.includes(j))
      if (!flag && i.type === 'select') {
        i.proxies = countries.concat(['🚀 国外流量', '🎯 国内流量', '♻️ 自动选择', '🚀 手动选择1', '🚀 手动选择2'])
@@ -94,7 +94,7 @@ module.exports = async (req, res) => {
 
   const newResponse = JSON.parse(JSON.stringify(configFinalFile));
   const response = YAML.stringify(newResponse);
-  
+
   res.setHeader('Content-Type', 'text/plain; charset=utf-8');
   res.status(200).send(response);
 };
