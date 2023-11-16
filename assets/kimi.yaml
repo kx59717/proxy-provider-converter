@@ -217,6 +217,31 @@ proxy-groups:
       - 🇧🇷 巴西节点
       - 🚀 手动选择1
       - 🚀 手动选择2
+  - name: 💻 Vercel
+    type: select
+    proxies:
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
   - name: 💻 Shopify
     type: select
     proxies:
@@ -471,9 +496,26 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: select
     proxies:
-      - ♻️ 自动选择
       - 🚀 国外流量
       - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
       - 🚀 手动选择1
       - 🚀 手动选择2
   - name: ♻️ 自动选择
@@ -675,6 +717,13 @@ rule-providers:
     interval: 86400
     url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Synology/Synology.yaml'
     path: ./Rules/Synology
+
+  Vercel:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Vercel/Vercel.yaml'
+    path: ./Rules/Vercel
 rules:
  - RULE-SET,Reject,REJECT
  - RULE-SET,Special,DIRECT
@@ -691,6 +740,7 @@ rules:
  - RULE-SET,PayPal,💻 PayPal
  - RULE-SET,Microsoft,💻 Microsoft
  - RULE-SET,Apple,💻 Apple
+ - RULE-SET,Vercel,Vercel
  - RULE-SET,Synology,DIRECT
  - RULE-SET,Domestic,DIRECT
  - RULE-SET,Domestic IPs,DIRECT
