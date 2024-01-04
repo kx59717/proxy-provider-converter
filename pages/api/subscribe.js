@@ -51,6 +51,9 @@ module.exports = async (req, res) => {
   configFinalFile.proxies.forEach((proxy) => {
     if (/\|.*-.*/.test(proxy.name)) {
       const country = proxy.name.split('-')[0];
+      if (proxy.name.includes('澳洲') && !countries.includes('澳洲')) {
+        countries.push('澳洲');
+      }
       if (!countries.includes(country)) {
         countries.push(country);
       }
