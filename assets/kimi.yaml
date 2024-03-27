@@ -267,6 +267,31 @@ proxy-groups:
       - 🇧🇷 巴西节点
       - 🚀 手动选择1
       - 🚀 手动选择2
+  - name: 💻 Cloudflare
+    type: select
+    proxies:
+      - 🚀 国外流量
+      - 🎯 国内流量
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇹🇼 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇮🇳 印度节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇷🇺 俄罗斯节点
+      - 🇩🇪 德国节点
+      - 🇹🇷 土耳其节点
+      - 🇦🇷 阿根廷节点
+      - 🇵🇭 菲律宾节点
+      - 🇹🇭 泰国节点
+      - 🇲🇾 马来西亚节点
+      - 🇧🇷 巴西节点
+      - 🚀 手动选择1
+      - 🚀 手动选择2
   - name: 💻 Shopify
     type: select
     proxies:
@@ -756,6 +781,13 @@ rule-providers:
     interval: 86400
     url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Claude/Claude.yaml'
     path: ./Rules/Claude
+
+  Cloudflare:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Cloudflare/Cloudflare.yaml'
+    path: ./Rules/Cloudflare
 rules:
  - RULE-SET,Reject,REJECT
  - RULE-SET,Special,DIRECT
@@ -767,6 +799,7 @@ rules:
  - RULE-SET,Netflix,🎥 Netflix
  - RULE-SET,YouTube,🎥 Youtube
  - RULE-SET,Claude,💻 Claude
+ - RULE-SET,Cloudflare,💻 Cloudflare
  - RULE-SET,OpenAI,💻 OpenAI
  - RULE-SET,Disney Plus,🎥 DisneyPlus
  - RULE-SET,Telegram,💻 Telegram
